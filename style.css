@@ -202,7 +202,7 @@ button{
 .fill h1{
     text-transform: uppercase;
     letter-spacing: 3px;
-
+}
 
 @media screen and (max-width:1023px) {
     .CardLeft2 .card_container img,.CardLeft2,.cardback img,.cardback{
