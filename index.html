@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@400;700;900&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>Final Output</title>
+    <style type="text/css">
+    *,*>*{
+      font-family: 'Space Grotesk', sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="CardLeft1">
+          <div class="cards">
+            <div class="CardLeft2">
+              <img
+                src="./images/card-logo.svg"
+                alt="card-logo"
+                class="logo1"
+              />
+              <div class="card_container">
+                <img src="./images/bg-card-front.png" alt="front-card" />
+                <h1 id="numdisp">0000 0000 0000 0000</h1>
+                <div class="cardContent">
+                  <span id="name">Juan Dela Cruz</span>
+                  <span id="date">
+                    <span id="month">00</span>
+                    /
+                    <span id="year">00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="cardback">
+              <img src="./images/bg-card-back.png" alt="back-card" />
+              <span id="cvcode">000</span>
+            </div>
+          </div>
+        </div>
+        <div class="Rside">
+          <form>
+            <div class="box1">
+              <label for="cardname">Cardholder Name</label>
+              <input
+                type="text"
+                placeholder="e.g. Juan Dela Cruz"
+                id="cardname"
+                required
+              />
+            </div>
+            <div class="box2">
+              <label for="cardnum">Card Number</label>
+              <input
+
+                type="numdisp"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="16"
+                maxlength="16"
+                placeholder="e.g. 1234 5678 9123 0000"
+                id="cardnum"
+                required
+              />
+            </div>
+            <div class="insidecard">
+              <div id="date">
+                <label for="date">Exp. Date (MM/YY)</label>
+                <div class="div2">
+                  <div>
+                    <input
+                      type="numdisp"
+                      placeholder="MM"
+                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="2"
+                      maxlength="2"
+                      id="CardMonth"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      type="numdisp"
+                      minlength="2"
+                      maxlength="2"
+                      placeholder="YY"
+                      id="cardyear"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="box4">
+                <label for="cvcnum">CVC</label>
+                <input class="cvstyle" type="numdisp" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" placeholder="e.g. 123" id="cvcnum" required />
+              </div>
+            </div>
+            <style type="text/css">
+              button:hover{
+                background-color: white;
+                color: black;
+              }
+            </style>
+            <button id="confirm" type="submit">Confirm</button>
+          </form>
+          <div class="fill hidden">
+            <img src="./images/icon-complete.svg" alt="done" />
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

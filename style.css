@@ -1,0 +1,248 @@
+
+body{
+    min-height: 100vh;
+}
+.hidden{
+    display: none !important;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.cardContent{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.CardLeft1{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url('./images/bg-main-desktop.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.cards{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%,-50%);
+}
+.CardLeft2{
+    position: relative;
+    transform: translateX(-100px);
+}
+
+.logo1{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+#numdisp{
+    position: absolute;
+    color: white;
+    bottom: 5rem;
+    left: 1rem;
+    letter-spacing: 2px;
+}
+
+.cardback{
+    position: relative;
+}
+.error{
+    border: 2px solid red;
+}
+.err{
+    gap: 0;
+}
+.err::after{
+    content: "Please fill this up";
+    color: red;
+    margin-top: .2rem;
+}
+#cvcode{
+    position: absolute;
+    right: 3.5rem;
+    top: 7rem;
+    color: #dedddf;
+}
+input{
+    padding: .5rem;
+    font-size: 18px;
+    border: 1px solid #8e8593;
+    border-radius: 6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.Rside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.Rside form{
+   display: grid;
+   gap: 1rem;
+   width: 350px;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-rows: repeat(4,1fr);
+}
+
+.insidecard{
+    display: flex;
+    grid-column: 2 span;
+    gap: 1rem;
+}
+
+.cardback{
+    transform: translateY(70px);
+}
+label{
+    color: #21092f;
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+}
+
+input::placeholder{
+    font-family: inherit;
+    color: #8e8593;
+}
+input:focus{
+    outline-color: #6448fe;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+
+
+#date{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+#date .div2{
+    display: flex;
+}
+.div2 div{
+    flex-direction: column;
+}
+#date div input{
+    width: 70px;
+    margin-inline: 1.5rem;
+    margin-left: 1px;
+}
+#cvcnum{
+    width: 100%;
+}
+
+#cardname, #cardyear, #CardMonth, #cardnum, .cvstyle {
+border-color: gray;
+border-width: 2px;
+}
+form button{
+    padding-right: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: white;
+    border-radius: 6px;
+    background: #21092f;
+    cursor: pointer;
+}
+button{
+  padding-right: 150rem;
+}
+}
+.fill p{
+    font-size: 18px;
+    color: #8e8593;
+}
+.fill button{
+    color: white;
+    width: 100%;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 18px;
+    background-color: #21092f;
+    cursor: pointer;
+}
+.fill{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+}
+.fill h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+
+@media screen and (max-width:1023px) {
+    .CardLeft2 .card_container img,.CardLeft2,.cardback img,.cardback{
+        width: 300px;
+    }
+    .logo1{
+        width: 50px;
+    }
+    #numdisp{
+        font-size: 1.1rem;
+    }
+    #cvcode{
+        top: 42%;
+        right: 12%;
+    }
+}
+@media screen and (max-width:767px) {
+    .container{
+        flex-direction: column;
+    }
+    .CardLeft2 .card_container img,.CardLeft2,.cardback img,.cardback{
+        width: 280px;
+    }
+    .CardLeft1{
+        width: 100%;
+        min-height: 30vh;
+        background-image: url('./images/bg-main-mobile.png');
+    }
+    .cards{
+        flex-direction: column-reverse;
+        left: 61%;
+        top: 60%;
+        gap: 0;
+    }
+
+    .CardLeft2{
+        z-index: 100;
+    }
+    .Rside{
+        margin-top: 6rem;
+    }
+
+}
